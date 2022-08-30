@@ -1,0 +1,296 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color:yellow;
+}
+
+
+@font-face {
+    font-family: font1;
+    src: url(fonts/Arima/static/Arima-Medium.ttf);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(fonts/Great_Vibes//GreatVibes-Regular.ttf);
+}
+
+@font-face {
+    font-family: font3;
+    src: url(fonts/Josefin_Sans/static/JosefinSans-Medium.ttf);
+}
+@font-face {
+    font-family: font4;
+    src: url(fonts/Oswald/static/Oswald-Medium.ttf);
+}
+@font-face {
+    font-family: font5;
+    src: url(fonts/Smooch/Smooch-Regular.ttf);
+}
+@font-face {
+    font-family: font6;
+    src: url(fonts/The_Nautigal/TheNautigal-Regular.ttf);
+}
+
+
+
+body{
+    overflow: hidden;
+}
+
+
+/* LOADER */
+.loader{
+    width: 0%;
+    height: 2px;
+    background-color: red;
+    z-index: 100;
+    position: relative;
+    animation-name: loader;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+@keyframes loader {
+    0%{
+        width: 1%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+/* LOADER END */
+
+
+.header{
+    font-family: font5;
+    z-index: 99;
+    font-size: 6vh;
+    position: relative;
+    margin-top: 1pc;
+    left: 10%;
+    text-shadow: 1px 1px 10px white;
+}
+.header-icon{
+    width: 2.5pc !important;
+    height: 2.5pc !important;
+    margin-left: 1pc !important;
+}
+
+/* =========================
+    Banner 1
+============================ */
+.banner1, .banner2, .banner3, .banner4{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+/* ======== Slide ========= */
+.banner1{
+    animation: slide1 12s linear infinite;
+}
+@keyframes slide1 {
+    0%{
+        visibility: visible;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
+.banner2{
+    animation: slide2 12s linear infinite;
+}
+@keyframes slide2 {
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: visible;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+.banner3{
+    animation: slide3 12s linear infinite;
+}
+@keyframes slide3 {
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+.banner4{
+    animation: slide4 12s linear infinite;
+}
+@keyframes slide4 {
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
+
+img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    animation: zoom 4s ease-in-out 0s infinite;
+    
+}
+
+/* ======= Zoom In ======== */
+@keyframes zoom {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 120%;
+    }
+}
+
+
+
+.text-box{
+    width: 60%;
+    position: absolute;
+    top:35%;
+    left: 10%;
+    color: white;
+    animation: textup 12s linear 0s infinite;
+    transform: translateY(100px);
+}
+@keyframes textup {
+    10%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.text-box>h1{
+    font-size: 5pc;
+    margin-bottom: 3%;
+
+}
+.text-box>p{
+    font-size: 1pc;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.text-box1{
+    animation-delay: 0s;
+}
+.text-box2{
+    animation-delay: 3s;
+}
+.text-box3{
+    animation-delay: 6s;
+}
+.text-box4{
+    animation-delay: 9s;
+}
+
+
+@media screen and (min-width:401px)and (max-width:767px) {
+    .text-box{
+        width: 70%;
+        top:30%;
+        left:10%;
+    }
+}
+
+@media screen and (min-width:100px) and (max-width:400px) {
+    .header{
+        font-size: 2pc;
+        left: 4%;
+    }
+    .header-icon{
+        width: 2pc !important;
+        height: 1pc;
+        object-fit: fill;
+        
+    }
+    .text-box{
+        width: 90%;
+        top:30%;
+        left:5%;
+    }
+    .text-box>h1{
+        font-size: 4pc;
+    }
+    .text-box>p{
+        font-size: 0.9pc;
+    }
+    
+}
+
+/* Fonts */
+.dark-h{
+    font-family: font2;
+}
+.space-h{
+    font-family: font3;
+}
+.night-h{
+    font-family: font4;
+}
+.car-h{
+    font-family: font6;
+}
+
+
+/* COLOR */
+.space-h>span{
+    color: var(--primary-color);
+}
